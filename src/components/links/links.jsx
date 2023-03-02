@@ -21,11 +21,7 @@ const links = [
   },
   {
     label: "Our Business Model",
-    link: "glance",
-  },
-  {
-    label: "2022 At A Glance",
-    link: "glance",
+    link: "business-model",
   },
 ];
 export default links;

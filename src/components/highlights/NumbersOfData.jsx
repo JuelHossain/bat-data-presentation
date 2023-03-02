@@ -1,18 +1,9 @@
 /* eslint-disable consistent-return */
-import { animate, motion, useInView, useMotionValue, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import useTextIncreased from "../performance/useTextIncreased";
 
 export default function NumbersOfData({ beforeText, number, afterText, bottomText }) {
-  const count = useMotionValue(0);
-  const rounded = useTransform(count, (latest) => Math.round(latest).toLocaleString());
-
-  const ref = useRef(null);
-  const isInView = useInView(ref);
-
-  useEffect(() => {
-    const controls = animate(count, isInView ? number : 0, { duration: 2 });
-    return controls.stop;
-  }, [number, count, isInView]);
+  const { ref, data: rounded } = useTextIncreased(number);
 
   return (
     <motion.div ref={ref} className="bg-main h-28 flex justify-end items-end">
