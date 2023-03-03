@@ -1,61 +1,57 @@
+/* eslint-disable no-restricted-syntax */
 import { motion } from "framer-motion";
-import { Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import image2 from "./howwewin.svg";
-import image1 from "./mission-01.svg";
-import "./module.background.css";
-import image3 from "./ourpurpose_Artboard 1.svg";
+import React from "react";
+import bg from "./ethos.png";
 
 // import required modules
 
-export default function background() {
+export default function Background() {
+  // const scrollRef = useRef(null);
+  // const ghostRef = useRef(null);
+  // const [scrollRange, setScrollRange] = useState(0);
+  // const [viewportW, setViewportW] = useState(0);
+
+  // useLayoutEffect(() => {
+  //   if (scrollRef) setScrollRange(scrollRef.current.scrollWidth);
+  // }, [scrollRef]);
+
+  // const onResize = useCallback((entries) => {
+  //   for (const entry of entries) {
+  //     setViewportW(entry.contentRect.width);
+  //   }
+  // }, []);
+
+  // useLayoutEffect(() => {
+  //   const resizeObserver = new ResizeObserver((entries) => onResize(entries));
+  //   resizeObserver.observe(ghostRef.current);
+  //   return () => resizeObserver.disconnect();
+  // }, [onResize]);
+
+  // const { scrollYProgress } = useViewportScroll();
+  // const transform = useTransform(scrollYProgress, [0, 1], [0, -scrollRange + viewportW]);
+  // const physics = { damping: 15, mass: 0.27, stiffness: 55 };
+  // const spring = useSpring(transform, physics);
   return (
-    <Swiper
-      slidesPerView="auto"
-      spaceBetween={30}
-      modules={[Pagination]}
-      mousewheel
-      direction="horizontal"
-      className="flex justify-center items-center"
-    >
-      <motion.svg
-        version="1.1"
-        id="Layer_1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        x="0px"
-        y="0px"
-        viewBox="0 0 1941.8 254.9"
-        xml:space="preserve"
-        className="absolute h-full z-0"
+    <motion.div className="h-[400px] relative">
+      <motion.img src={bg} className="absolute z-10 h-full object-cover object-left" />
+      <motion.div className="absolute z-20">
+        
+      </motion.div>
+      {/* <Carousel
+        classNames={{
+          root: "bg-hero-pattern",
+        }}
       >
-        <motion.rect
-          initial={{ x: 1000 }}
-          animate={{ x: 0 }}
-          transition={{ duration: 1 }}
-          y="10.2"
-          className="st0"
-          width="628.3"
-          height="234.5"
-        />
-        <motion.polygon className="st6" points="1941.8,10.2 1941.8,244.7 1399.9,244.7 1462.3,127.5 1399.9,10.2 	" />
-        <motion.polygon className="st7" points="618.2,10.2 565.8,127.5 628.1,244.7 1115.9,244.7 1105.9,10.2 	" />
-        <motion.polygon
-          className="st8"
-          points="1462.8,127.5 1400.4,244.7 1192.6,244.7 1198.3,234.8 1259.6,127.1 1197.8,20.1 1192.1,10.2 
-		1400.4,10.2 	"
-        />
-        <motion.polygon className="st9" points="1108.9,254.9 1254.6,254.9 1327.4,127.5 1254.6,0 1108.9,0 1036,127.5 	" />
-      </motion.svg>
-      <SwiperSlide>
-        <motion.img src={image1} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <motion.img src={image2} />
-      </SwiperSlide>
-      <SwiperSlide>
-        <motion.img src={image3} />
-      </SwiperSlide>
-    </Swiper>
+        <Carousel.Slide className="w-full h-full">
+          <motion.img src={image1} className="h-96 object-contain" />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <motion.img src={image2} className="h-96 object-contain" />
+        </Carousel.Slide>
+        <Carousel.Slide>
+          <motion.img src={image3} className="h-96 object-contain" />
+        </Carousel.Slide>
+      </Carousel> */}
+    </motion.div>
   );
 }

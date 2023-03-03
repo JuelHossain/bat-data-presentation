@@ -5,7 +5,7 @@ import MenuButton from "./MenuButton";
 
 export default function Header() {
   return (
-    <motion.div className="bg-main p-4">
+    <motion.div className="bg-main p-4 max-w-full">
       <motion.div className="container mx-auto flex items-center justify-between flex-wrap gap-4">
         <motion.div className="flex justify-between max-md:w-full">
           <motion.img src={logoImage} />

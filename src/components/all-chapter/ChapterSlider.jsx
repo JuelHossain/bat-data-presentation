@@ -11,14 +11,14 @@ export default function ChapterSlider() {
   return (
     <Carousel
       withIndicators
-      slideSize="15%"
+      slideSize="18%"
       loop
       breakpoints={[
         { maxWidth: "xl", slideSize: "25%" },
-        { maxWidth: "lg", slideSize: "35%" },
-        { maxWidth: "md", slideSize: "45%" },
-        { maxWidth: "sm", slideSize: "55%" },
-        { maxWidth: "xs", slideSize: "65%" },
+        { maxWidth: "lg", slideSize: "30%" },
+        { maxWidth: "md", slideSize: "33%" },
+        { maxWidth: "sm", slideSize: "50%" },
+        { maxWidth: "xs", slideSize: "75%" },
       ]}
       align="center"
       slidesToScroll={1.5}

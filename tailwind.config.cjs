@@ -5,6 +5,10 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundImage: {
+        "hero-pattern": "url('../shapes/ethos.png')",
+        "footer-texture": "url('/img/footer-texture.png')",
+      },
       colors: {
         main: "#002A68",
         sec: "#01B1EB",
