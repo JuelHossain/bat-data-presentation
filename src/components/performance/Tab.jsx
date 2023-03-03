@@ -6,6 +6,7 @@ export default function Tab({ active, setActive }) {
   const tabLinks = Object.keys(performanceData).map((key, index) => {
     const { color } = performanceData[key];
     const textColor = color === "yellow" ? "black" : color === "orange" ? "black" : active === index && "white";
+   
     return (
       <motion.button
         onClick={() => setActive(index)}

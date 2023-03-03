@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
-export default function Title({ children }) {
+export default function Title({ children, center }) {
   return (
-    <motion.div>
+    <motion.div className={center && "flex flex-col  justify-center items-center"}>
       <motion.h2 className="text-4xl font-bold">{children}</motion.h2>
       <motion.div
         initial={{ width: 0 }}

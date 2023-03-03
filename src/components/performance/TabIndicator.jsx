@@ -13,7 +13,7 @@ export default function TabIndicator({ color }) {
       xmlSpace="preserve"
       className="w-10 h-7 absolute -bottom-5"
     >
-      <motion.polygon fill={color} className="st0" points="0,0 13,13 26.1,0 " />
+      <motion.polygon fill={color} points="0,0 13,13 26.1,0 " />
     </motion.svg>
   );
 }

@@ -4,7 +4,7 @@ import Section from "./Section";
 
 export default function Statement() {
   return (
-    <motion.div className="flex flex-col gap-10 mb-16">
+    <motion.div className="flex flex-col gap-10 mb-16 overflow-hidden">
       {data.map((detail) => (
         <Section key={detail.title} {...detail} />
       ))}
