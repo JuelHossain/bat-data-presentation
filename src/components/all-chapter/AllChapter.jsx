@@ -4,7 +4,7 @@ import ChapterSlider from "./ChapterSlider";
 
 export default function AllChapter() {
   return (
-    <motion.div className="mb-20">
+    <motion.div className="relative overflow-hidden">
       <motion.div className=" flex flex-col gap-10">
         <Title center>All Chapter</Title>
         <ChapterSlider />

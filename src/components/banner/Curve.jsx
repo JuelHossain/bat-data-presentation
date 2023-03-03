@@ -4,7 +4,7 @@ import bottomLine from "../../assets/banner/onecurveline.svg";
 export default function Curve() {
   return (
     <motion.div
-      animate={{ x: [-500, 5000, -1200, 5000, -50] }}
+      whileInView={{ x: [-500, 5000, -1200, 5000, -50] }}
       transition={{ repeat: "infinite", duration: 120 }}
       className="w-[2000px] flex justify-center mx-auto"
     >

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import AllChapter from "./components/all-chapter/AllChapter";
 import Banner from "./components/banner/Banner";
 import Capital from "./components/capital/Capital";
+import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Highlights from "./components/highlights/Highlights";
 import NavLinks from "./components/links/NavLinks";
@@ -21,6 +22,7 @@ export default function App() {
       {/* <Vision /> */}
       <Capital />
       <AllChapter />
+      <Footer />
     </motion.div>
   );
 }

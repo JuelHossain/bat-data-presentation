@@ -8,7 +8,7 @@ export default function Performance() {
   const [active, setActive] = useState(1);
 
   return (
-    <motion.div className="mb-20">
+    <motion.div className="mb-20 p-4">
       <motion.div className="container mx-auto flex flex-col gap-10 text-main ">
         <Title>Key Performance Indicators</Title>
         <Tab {...{ active, setActive }} />

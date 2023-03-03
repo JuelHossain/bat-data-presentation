@@ -11,15 +11,26 @@ export default function Section({ img, title, sayings, reverse }) {
       whileInView={{ x: 0 }}
       exit={{ x: reverse ? -200 : 200 }}
       transition={{ duration: 0.5 }}
-      className={`container mx-auto flex  border-b-4 border-main ${reverse && "flex-row-reverse"}`}
+      className={`container mx-auto flex flex-col   border-b-4 border-main ${
+        reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+      }`}
     >
       <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} className="flex-1 relative">
-        <motion.img src={img} className="w-full object-cover h-full object-top absolute " />
+        <motion.div className="w-full h-full flex justify-center items-end">
+          <motion.img
+            src={img}
+            className="h-full w-full max-h-96 md:max-h-[500px] xl:max-h-[600px] object-cover object-top "
+          />
+        </motion.div>
       </motion.div>
-      <motion.div className="flex-1 p-20 pb-10 flex flex-col gap-6">
+      <motion.div className="flex-1 md:p-20 pb-10 flex flex-col gap-6">
         <motion.div>
-          <motion.h2 className="text-6xl font-semibold text-main ">{title}'s</motion.h2>
-          <motion.h2 className="text-6xl font-semibold text-main ">Statement</motion.h2>
+          <motion.h2 className="text-2xl xs:text-4xl lg:text-5xl xl:text-6xl font-semibold text-main ">
+            {title}'s
+          </motion.h2>
+          <motion.h2 className=" xs:text-4xl lg:text-5xl xl:text-6xl font-semibold text-main text-2xl ">
+            Statement
+          </motion.h2>
           <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: 200 }}
@@ -27,9 +38,9 @@ export default function Section({ img, title, sayings, reverse }) {
             exit={{ width: 0 }}
             className="h-2 bg-sec w-40 rounded-full my-6"
           />
-          <motion.p className="text-2xl pr-40">{sayings}</motion.p>
+          <motion.p className=" text-lg lg:text-xl xl:text-2xl 2xl:pr-40">{sayings}</motion.p>
         </motion.div>
-        <motion.div className="flex items-center gap-6">
+        <motion.div className="flex items-center gap-6 flex-wrap">
           <ReadButton />
           <DownloadPdf />
         </motion.div>

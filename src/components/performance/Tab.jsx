@@ -6,7 +6,7 @@ export default function Tab({ active, setActive }) {
   const tabLinks = Object.keys(performanceData).map((key, index) => {
     const { color } = performanceData[key];
     const textColor = color === "yellow" ? "black" : color === "orange" ? "black" : active === index && "white";
-   
+
     return (
       <motion.button
         onClick={() => setActive(index)}
@@ -25,5 +25,5 @@ export default function Tab({ active, setActive }) {
       </motion.button>
     );
   });
-  return <motion.div className="flex gap-2"> {tabLinks}</motion.div>;
+  return <motion.div className="flex gap-2 overflow-auto overflow-y-hidden pb-5"> {tabLinks}</motion.div>;
 }

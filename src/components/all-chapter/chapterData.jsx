@@ -41,7 +41,7 @@ const chapterData = [
   {
     title: "OverView",
     icon: Eye,
-    color: "bg-[#ABC737] text-white",
+    color: "bg-[#FCB813] text-white",
   },
   {
     title: "Our Leadership",

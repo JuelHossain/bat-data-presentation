@@ -3,7 +3,7 @@ import ReadButton from "../statement/ReadButton";
 
 export default function Card({ img, title, name, designation, text, colorClass }) {
   return (
-    <motion.div className={` flex flex-col justify-between items-center p-6 gap-10 ${colorClass}`}>
+    <motion.div className={` flex flex-col justify-between items-center p-6 gap-10 ${colorClass} h-full`}>
       <motion.div className="flex flex-col gap-4 text-center items-center justify-center">
         <motion.img src={img} className="w-full h-72 object-cover object-top " />
         <motion.h3 className="text-2xl text-white">{title}</motion.h3>
