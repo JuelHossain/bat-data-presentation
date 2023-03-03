@@ -1,57 +1,63 @@
 /* eslint-disable no-restricted-syntax */
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
-import bg from "./ethos.png";
+import image2 from "./howwewin.svg";
+import image1 from "./mission-01.svg";
+import image4 from "./ourpurpose_Artboard 1.svg";
+import image3 from "./stakeholderoutcomes_Artboard 1.svg";
 
 // import required modules
 
-export default function Background() {
-  // const scrollRef = useRef(null);
-  // const ghostRef = useRef(null);
-  // const [scrollRange, setScrollRange] = useState(0);
-  // const [viewportW, setViewportW] = useState(0);
-
-  // useLayoutEffect(() => {
-  //   if (scrollRef) setScrollRange(scrollRef.current.scrollWidth);
-  // }, [scrollRef]);
-
-  // const onResize = useCallback((entries) => {
-  //   for (const entry of entries) {
-  //     setViewportW(entry.contentRect.width);
-  //   }
-  // }, []);
-
-  // useLayoutEffect(() => {
-  //   const resizeObserver = new ResizeObserver((entries) => onResize(entries));
-  //   resizeObserver.observe(ghostRef.current);
-  //   return () => resizeObserver.disconnect();
-  // }, [onResize]);
-
-  // const { scrollYProgress } = useViewportScroll();
-  // const transform = useTransform(scrollYProgress, [0, 1], [0, -scrollRange + viewportW]);
-  // const physics = { damping: 15, mass: 0.27, stiffness: 55 };
-  // const spring = useSpring(transform, physics);
+export default function Background({ mainRef }) {
   return (
-    <motion.div className="h-[400px] relative">
-      <motion.img src={bg} className="absolute z-10 h-full object-cover object-left" />
-      <motion.div className="absolute z-20">
-        
-      </motion.div>
-      {/* <Carousel
-        classNames={{
-          root: "bg-hero-pattern",
-        }}
-      >
-        <Carousel.Slide className="w-full h-full">
-          <motion.img src={image1} className="h-96 object-contain" />
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <motion.img src={image2} className="h-96 object-contain" />
-        </Carousel.Slide>
-        <Carousel.Slide>
-          <motion.img src={image3} className="h-96 object-contain" />
-        </Carousel.Slide>
-      </Carousel> */}
-    </motion.div>
+    <div className="h-screen py-20 duration-300 bg-main overflow-x-scroll flex  my-20" ref={mainRef}>
+      <AnimatePresence mode="wait">
+        <motion.img key={4} initial={{ x: 150 }} whileInView={{ x: 500 }} src={image1} className="h-full p-12" />
+        <motion.img
+          key={1}
+          transition={{ duration: 0.5 }}
+          initial={{ x: 1300, opacity: 0 }}
+          whileInView={{ x: 250, opacity: 1 }}
+          exit={{ x: -1300 }}
+          src={image2}
+          className="h-full p-12 object-cover"
+        />
+        <motion.img
+          key={2}
+          // transition={{ delay: 1 }}
+          initial={{ x: 600, opacity: 0 }}
+          whileInView={{ x: -100, opacity: 1 }}
+          exit={{ x: -1000 }}
+          src={image4}
+          className="h-full p-12 object-cover z-10"
+        />
+        <motion.img
+          key={3}
+          // transition={{ delay: 1 }}
+          initial={{ x: 200, opacity: 0 }}
+          whileInView={{ x: -450, opacity: 1 }}
+          src={image3}
+          exit={{ x: -1000 }}
+          // transition={{ delay: 1 }}
+          className="h-full p-12 object-cover z-0"
+        />
+      </AnimatePresence>
+      {/* <Picture /> */}
+    </div>
+    //   {/* <Carousel
+    //     classNames={{
+    //       root: "bg-hero-pattern",
+    //     }}
+    //   >
+    //     <Carousel.Slide className="w-full h-full">
+    //     </Carousel.Slide>
+    //     <Carousel.Slide>
+    //       <motion.img src={image2} className="h-96 object-contain" />
+    //     </Carousel.Slide>
+    //     <Carousel.Slide>
+    //       <motion.img src={image3} className="h-96 object-contain" />
+    //     </Carousel.Slide>
+    //   </Carousel> */}
+    // </motion.div>
   );
 }

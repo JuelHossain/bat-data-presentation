@@ -6,8 +6,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "hero-pattern": "url('../shapes/ethos.png')",
-        "footer-texture": "url('/img/footer-texture.png')",
+        "vision-bg": "url('./src/components/vision/shapes/ethos.png')",
       },
       colors: {
         main: "#002A68",
